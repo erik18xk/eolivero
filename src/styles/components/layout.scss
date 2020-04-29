@@ -1,4 +1,6 @@
 @import "../common/mixins/breakpoints.scss";
+@import "../common/mixins/text";
+@import "../common/coulours.scss";
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -31,6 +33,12 @@ p {
         margin: 0 auto;
         font-size: 1.6rem;
     }
+
+    &--hidden {
+        display: none;
+        opacity: 0;
+    }
+
 }
 
 .main {
@@ -39,5 +47,50 @@ p {
         display: flex;
         flex: 1;
         flex-flow: column;
+        margin-bottom: 20em;
+    }
+}
+
+a {
+    text-decoration: none;
+    border-top: 1px solid rgba(156,158,165,.3);
+    &:nth-last-child(1) {
+        border-bottom: 1px solid rgba(156,158,165,.3);
+    }
+}
+
+.menu {
+    &__overlay {
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+        min-height: 100vh;
+        display: flex;
+        flex: 1;
+        flex-flow: column;
+        background-color: $black;
+        color: $white;
+
+        &--hidden {
+            display: flex;
+            height: 0;
+            opacity: 0;
+        }
+    }
+
+    &__items {
+        margin: 0 30px 0 30px;
+        display: flex;
+        flex: 1;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0 0 20px 0;
+    }
+
+    &__item {
+        @include text--md;
+        list-style-type: none;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }

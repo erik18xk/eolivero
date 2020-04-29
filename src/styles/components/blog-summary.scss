@@ -7,15 +7,23 @@
     display: flex;
     flex: 1;
     flex-flow: column;
-    border-top: 1px solid rgba(156,158,165,.3);
+    color: $black;
 
     &__section {
         padding: 100px 0 100px 0;
     }
 
     &__tags {
+        @include text--uppercase;
         color: $grey-light;
         margin-bottom: 16.8px;
+        display: flex;
+        flex: 1;
+        flex-flow: row;
+
+        &__element {
+            margin-right: 16px;
+        }
     }
 
     &__title {

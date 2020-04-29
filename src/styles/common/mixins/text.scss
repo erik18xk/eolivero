@@ -6,31 +6,26 @@
 // Add breakpoints for style every device
 @mixin text--xsm {
     font-size: 13px;
-    color: $black;
     font-weight: 500;
 }
 
 @mixin text--sm {
     font-size: 16px;
-    color: $black;
     font-weight: 500;
 }
 
 @mixin text--md {
     font-size: 19px;
-    color: $black;
     font-weight: 500;
 }
 
 @mixin text--xl {
     font-size: 22px;
-    color: black;
     font-weight: 500;
 }
 
 @mixin text--xxl {
     font-size: 25px;
-    color: black;
     font-weight: 500;
 }
 
@@ -44,4 +39,10 @@
 
 @mixin text--bold {
     font-weight: 800;
+}
+
+// Transform
+
+@mixin text--uppercase {
+    text-transform: uppercase;
 }

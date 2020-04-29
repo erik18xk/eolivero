@@ -3,22 +3,29 @@ import PropTypes from "prop-types";
 import React from "react";
 import "../styles/components/blog-summary.scss";
 
-const BlogSummmary = () => {
+const BlogSummmary = ({ data }) => {
+    console.log(data.path)
+    const { title, description, path } = data
     return (
-        <div className="blog blog__section">
-            <div className="blog__tags">
-                Business
+        <Link to={path}>
+            <div className="blog blog__section">
+                <div className="blog__tags">
+                    {data.tags.map(el => (
+                    <div className="blog__tags__element">
+                        { el }
+                    </div> ))}
+                </div>
+                <div className="blog__title">
+                    { title }
+                </div>
+                <div className="blog__description">
+                    { description }
+                </div>
+                <div className="blog__cta">
+                    Read More
+                </div>
             </div>
-            <div className="blog__title">
-                This is an example of a title for my blog
-            </div>
-            <div className="blog__description">
-                This is the description for my blog and I really hope that everybody love it
-            </div>
-            <div className="blog__cta">
-                Read More
-            </div>
-        </div>
+        </Link>
     )
 }
 

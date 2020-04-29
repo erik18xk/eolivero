@@ -5,11 +5,17 @@
 .container {
     display: flex;
     height: 120px;
+    max-height: 120px;
 
     &__header {
         display: flex;
+        flex: 1;
         flex-flow: row;
         padding: 0 32px 0 32px;
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__logo {

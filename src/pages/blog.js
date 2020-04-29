@@ -11,7 +11,7 @@ const BlogPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Blog" />
-            {post.map(({ node }) => <Blog key={1}/>)}
+            {post.map(({ node, idx }) => <Blog data={node.frontmatter} key={1}/>)}
         </Layout>
     )
 }
@@ -31,6 +31,9 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
+            description
+            path
           }
         }
       }
