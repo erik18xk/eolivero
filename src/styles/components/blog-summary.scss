@@ -1,0 +1,35 @@
+@import "../common/mixins/breakpoints";
+@import "../common/mixins/text";
+@import "../common/coulours";
+
+.blog {
+    @include text--sm;
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    border-top: 1px solid rgba(156,158,165,.3);
+
+    &__section {
+        padding: 100px 0 100px 0;
+    }
+
+    &__tags {
+        color: $grey-light;
+        margin-bottom: 16.8px;
+    }
+
+    &__title {
+        @include text--xxl;
+        margin-bottom: 16.8px;
+    }
+
+    &__description {
+        color: $grey-light;
+        margin-bottom: 16.8px;
+    }
+
+    &__cta {
+        @include text--xsm;
+    }
+
+}

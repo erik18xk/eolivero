@@ -1,0 +1,32 @@
+@import "../common/mixins/breakpoints";
+@import "../common/mixins/text";
+@import "../common/coulours";
+
+.container {
+    display: flex;
+    height: 120px;
+
+    &__header {
+        display: flex;
+        flex-flow: row;
+        padding: 0 32px 0 32px;
+    }
+
+    &__logo {
+        @include text--xxl;
+        @include text--bold;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__nav {
+        @include text--md;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+}
